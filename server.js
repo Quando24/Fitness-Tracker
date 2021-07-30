@@ -7,35 +7,16 @@ const workoutsAPIRoutes = require('./routes/workouts')
 mongoDBURI = "mongodb+srv://Quando:Qstaxx_24@cluster0.oeu54.mongodb.net/Fitness-Tracker?retryWrites=true&w=majority"
 
 mongoose.connect(
-    mongoDBURI,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    }
-  );
+  mongoDBURI,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
-  // mongoose.connect(
-  //   process.env.MONGODB_URI || 'mongodb://localhost/myFirstDatabase',
-  //   {
-  //     useNewUrlParser: true,
-  //     useUnifiedTopology: true,
-  //     useCreateIndex: true,
-  //     useFindAndModify: false
-  //   }
-  // );
 
-/*
-  const MyModel = mongoose.model('Test', new mongoose.Schema({name: String}))
-  MyModel.find({}, (err, documents) => {
-      if (err) {
-          console.log(err)
-          return
-      }
-      console.log(documents)
-  })
-*/
 
 // Initialize the app and create a port
 const app = express();
